@@ -1,6 +1,6 @@
 package com.scoreit;
 
-public enum Skill {
+public enum SkillType {
     BATSMAN,
     BOWLER,
     ALL_ROUNDER
