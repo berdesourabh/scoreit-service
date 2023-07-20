@@ -1,0 +1,11 @@
+spring:
+  profile:
+    active: test
+  jpa:
+    database: h2
+  datasource:
+    url: jdbc:h2:mem:AZ
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
