@@ -1,6 +1,5 @@
 package com.scoreit.entity;
 
-import com.scoreit.SkillType;
 import jakarta.persistence.*;
 import java.util.Date;
 import lombok.AllArgsConstructor;
