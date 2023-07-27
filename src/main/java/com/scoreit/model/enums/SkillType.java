@@ -1,4 +1,4 @@
-package com.scoreit.entity;
+package com.scoreit.model.enums;
 
 public enum SkillType {
     BATSMAN,
