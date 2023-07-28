@@ -62,10 +62,10 @@ public class Player {
     @Column(name = "updated_timestamp")
     private Instant updatedTimestamp;
 
-    @Column(columnDefinition = "TINYINT(1)")
+    @Column(name = "deleted")
     private Boolean deleted = Boolean.FALSE;
 
     @Version
     @Column(name = "version_field")
-    private Integer versionField;
+    private int versionField;
 }

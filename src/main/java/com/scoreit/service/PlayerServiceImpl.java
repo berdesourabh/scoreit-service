@@ -15,7 +15,8 @@ public class PlayerServiceImpl implements PlayerService {
 
     @Override
     public Player create(PlayerDto player) throws Exception {
-        boolean playerExists = playerRepository.findByEmailAndMobileNumber(player.getEmail(), player.getMobileNumber());
+        boolean playerExists =
+                playerRepository.existsByEmailAndMobileNumber(player.getEmail(), player.getMobileNumber());
         if (playerExists) {
             throw new Exception("Player already exists with id");
         }
