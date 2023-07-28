@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface PlayerRepository extends JpaRepository<Player, Long> {
 
-    boolean findByEmailAndMobileNumber(@Param("email") String email, @Param("mobileNumber") long mobileNumber);
+    boolean existsByEmailAndMobileNumber(@Param("email") String email, @Param("mobileNumber") long mobileNumber);
 }

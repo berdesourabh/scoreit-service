@@ -33,13 +33,13 @@ class PlayerServiceTest {
 
     @Test
     void testCreateWithExistingPlayer() {
-        when(playerRepository.findByEmailAndMobileNumber(anyString(), anyLong()))
+        when(playerRepository.existsByEmailAndMobileNumber(anyString(), anyLong()))
                 .thenReturn(true);
         assertThrows(
                 Exception.class,
                 () -> playerService.create(
                         PlayerDto.builder().email("test@email.com").build()));
-        verify(playerRepository).findByEmailAndMobileNumber(anyString(), anyLong());
+        verify(playerRepository).existsByEmailAndMobileNumber(anyString(), anyLong());
         verify(playerRepository, never()).save(any(Player.class));
     }
 }
